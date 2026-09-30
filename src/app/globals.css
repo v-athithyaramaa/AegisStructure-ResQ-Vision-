@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #090d16;
+  --foreground: #f8fafc;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Leaflet Popup Tactical Overhaul */
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: rgba(15, 23, 42, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  color: #e2e8f0 !important;
+  border: 1px solid rgba(30, 41, 59, 0.8) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6) !important;
+}
+
+.leaflet-popup-close-button {
+  color: #94a3b8 !important;
+}
+
+/* Pulsating Circle Animation */
+@keyframes pulse {
+  0% { fill-opacity: 0.2; stroke-opacity: 0.5; stroke-width: 1; }
+  50% { fill-opacity: 0.5; stroke-opacity: 1; stroke-width: 2; }
+  100% { fill-opacity: 0.2; stroke-opacity: 0.5; stroke-width: 1; }
+}
+
+.pulsating-circle {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes radar-pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+.radar-pulse-ring {
+  animation: radar-pulse 2s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes march {
+  to {
+    stroke-dashoffset: -16;
+  }
+}
+.animated-egress-line {
+  animation: march 1s linear infinite;
+}
+
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+.animate-scan {
+  animation: scan 2s linear infinite;
+}
