@@ -4,7 +4,6 @@
   <p>
     <b>Problem Statement:</b> <code>[PSN002]</code> AI-Powered Structural Stability Assessment<br/>
     <b>Standard Compliance:</b> FEMA P-154 (Rapid Visual Screening) & ATC-20 (Post-Earthquake Safety Evaluation of Buildings)<br/>
-    <b>Target:</b> Bit N Build '26 Grand Finale (Mumbai)
   </p>
 </div>
 
